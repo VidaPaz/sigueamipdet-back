@@ -92,7 +92,7 @@ class PilaresController extends Controller
         $user->email = $request->email;
         $user->name = $request->name;
         $user->phone = $request->phone;
-        $user->photo = photo();
+        //$user->photo = photo();
         $user->rol = $request->rol;
         $user->vereda = $request->vereda;
         $user->username = $request->username;
@@ -189,7 +189,7 @@ class PilaresController extends Controller
 
         $comentarios = ComentarioProyecto::where('proyecto_id',$request->proyecto_id)->with('user')->orderBy('id','DESC')->get();
 
-        saveLog($user->id, $request->proyecto_id,'Realizo un comentario al proyecto');
+        //saveLog($user->id, $request->proyecto_id,'Realizo un comentario al proyecto');
         return response()->json($comentarios);
     }
     public function getComments(Request $request){
