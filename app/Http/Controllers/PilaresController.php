@@ -92,7 +92,7 @@ class PilaresController extends Controller
         $user->email = $request->email;
         $user->name = $request->name;
         $user->phone = $request->phone;
-        $user->photo = photo();
+        // $user->photo = photo();
         $user->rol = $request->rol;
         $user->vereda = $request->vereda;
         $user->username = $request->username;
